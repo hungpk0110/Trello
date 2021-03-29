@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Create a Trello Account</title>
+  <link rel="stylesheet" href="signup.css">
+</head>
+
+<body class="page-signup atlassian-brand" data-analytics-screen="signUpCreateAccountScreen">
+  <div>
+    <img alt="Trello" class="trello-main-logo" src="https://d2k1ftgv7pobq7.cloudfront.net/meta/c/p/res/images/trello-header-logos/167dc7b9900a5b241b15ba21f8037cf8/trello-logo-blue.svg" /> <input id="returnUrl" type="hidden" value=""> <input
+      id="confirmReturnUrl" type="hidden" value=""> <input id="enterprise-name" type="hidden" value="">
+    <section class="inner-section">
+      <div class="section-wrapper layout-grid-frame">
+        <div id="signup-form" class="layout-twothirds-center account-form">
+          <div id="unsupported-error" class="hidden error-message">
+            <p>We're happy you're signing up for Trello!</p>
+            <p>Before you get started, you'll need to <a href="platforms.html">switch to a supported browser</a>.</p>
+          </div>
+          <div id="error" class="hidden quick-switch" data-error="">
+            <p class="error-message"></p>
+          </div>
+          <div id="signup-password" class="quick-switch">
+            <div id="aa-managed-signup-prompt" class="info-message hidden">
+              <div>You need to sign up for Trello with Atlassian. That means everything in your new Trello account belongs to your organization, so be mindful of personal content.</div> <span class="atlassian-link">Sign up with Atlassian</span>
+            </div>
+            <div id="aa-unmanaged-signup-prompt" class="info-message hidden">
+              <p><b>Sign up for Trello with an Atlassian account.</b></p>
+              <p>To sign up for Trello, you must create or sign in to an Atlassian account.</p> <span class="atlassian-link">Continue to Atlassian</span>
+            </div>
+            <div id="login-prompt" class="info-message hidden">
+              <div>Hey, that email is already in use by another Atlassian account. You'll need to login with Atlassian to use Trello.</div> <span class="atlassian-link">Log in with Atlassian</span>
+            </div>
+            <h1>Sign up for your account</h1>
+            <form id="signup" class="sign-up-container"> <input type="email" name="email" id="email" class="form-field" tabindex="0" autocorrect="off" spellcheck="false" autocapitalize="off" value="" placeholder="Enter email"
+                autocomplete="username email">
+              <div id="email-error" class="hidden error-message"></div>
+              <p class="quiet tos"> By signing up, you confirm that you've read and accepted our <a href="legal.html" target="_blank" data-analytics-event="clickedSignUpTOSLink">Terms of Service</a> and <a href="privacy.html" target="_blank"
+                  data-analytics-event="clickedSignUpPrivacyLink">Privacy Policy</a>. </p>
+              <div id="signup-enterprise-confirmation" class="hidden"> <label> <input type="checkbox"> </label> </div>
+              <div id="recaptcha" class="g-recaptcha hidden" data-callback="recaptchaResponseCallback" data-expired-callback="recaptchaExpiredCallback" data-error-callback="recaptchaErrorCallback"
+                data-sitekey="6Lc-PEwUAAAAANucGA7WWm-2gvS0ayk9q_-ber3S"></div> <input id="signup-submit" tabindex="0" type="submit" class="button account-button button-green signup-redirect" value="Continue"
+                data-analytics-button="signUpCreateAccountButton" disabled="disabled">
+            </form>
+            <form id="signup-redirect" action="https://trello.com/signup_redirect" method="post"> <input type="hidden" name="email" id="signup-redirect-email"> <input type="hidden" name="locale" id="signup-redirect-locale" value=""> </form>
+            <form id="signup-atlassian-google" action="https://trello.com/authenticate_openid" method="post">
+              <div class="login-method-separator">OR</div> <input type="hidden" name="subProvider" value="google"> <input type="hidden" name="isSignup" value="true"> <input type="hidden" name="tosAccepted" id="atlassian-google-tos-accepted"
+                value="true"> <input type="hidden" name="locale" id="signup-atlassian-google-locale" value="">
+              <div id="google" class="google-button oauth-button" tabindex="0"> <span id="google-icon" class="icon"></span> <span class="label" data-analytics-button="signUpWithGmailButton">Continue with Google</span> </div>
+            </form>
+            <form id="signup-atlassian-microsoft" action="https://trello.com/authenticate_openid" method="post"> <input type="hidden" name="provider" value="atlassian"> <input type="hidden" name="subProvider" value="microsoft"> <input type="hidden"
+                name="tosAccepted" id="atlassian-microsoft-tos-accepted" value="true"> <input type="hidden" name="locale" id="signup-atlassian-microsoft-locale" value="">
+              <div id="microsoft" class="msft-button oauth-button" tabindex="0"> <span id="msft-icon" class="icon"></span> <span class="label" data-analytics-button="signUpWithMicrosoftButton">Continue with Microsoft</span> </div>
+            </form>
+            <form id="signup-atlassian-apple" action="https://trello.com/authenticate_openid" method="post"> <input type="hidden" name="provider" value="atlassian"> <input type="hidden" name="subProvider" value="apple"> <input type="hidden"
+                name="tosAccepted" id="atlassian-apple-tos-accepted" value="true"> <input type="hidden" name="locale" id="signup-atlassian-apple-locale" value="">
+              <div id="apple" class="apple-button oauth-button" tabindex="0"> <span id="apple-icon" class="icon"></span> <span class="label" data-analytics-button="signUpWithAppleButton">Continue with Apple</span> </div>
+            </form>
+            <form id="signup-atlassian" action="https://trello.com/authenticate_openid" method="post"> <input type="hidden" name="openid_identifier" value="https://id.atlassian.com/openid/v2/op"> <input type="hidden" name="provider"
+                value="atlassian"> <input type="hidden" name="tosAccepted" id="atlassian-tos-accepted" value="true"> <input type="hidden" name="locale" id="signup-atlassian-locale" value=""> <input type="hidden" name="user" id="signup-atlassian-user"
+                value=""> </form>
+            <hr /> <span class="bottom-form-link"><a href="login.html" data-analytics-link="signUpLoginLink">Already have an account? Log In</a></span>
+          </div>
+          <div id="confirm-tos-container" class="layout-twothirds-center hidden">
+            <h1>Create a Trello Account</h1>
+            <p> By signing up you agree to the <a href="legal.html" target="_blank" data-analytics-link="signUpTOSLink">Terms of Service</a> and <a href="privacy.html" target="_blank" data-analytics-link="signUpPrivacyLink">Privacy Policy</a>. </p>
+            <input id="confirm-tos" tabindex="0" type="button" class="button button-green" value="I accept the Terms of Service and Privacy Policy">
+          </div>
+        </div>
+    </section>
+  </div>
+  <footer class="global-footer" data-track-group="Footer">
+    <div class="select-container">
+      <select name="language-picker" id="language-picker">
+        <option value="choose-one" id="choose" disabled="true">Select your language…</option>
+        <option value="cs" data-url="https://trello.com/cs/signup">Čeština</option>
+        <option value="de" data-url="https://trello.com/de/signup">Deutsch</option>
+        <option value="en" data-url="https://trello.com/en/signup">English</option>
+        <option value="en-AU" data-url="https://trello.com/en-AU/signup">English (AU)</option>
+        <option value="en-GB" data-url="https://trello.com/en-GB/signup">English (UK)</option>
+        <option value="en-US" data-url="https://trello.com/en-US/signup">English (US)</option>
+        <option value="es" data-url="https://trello.com/es/signup">Español</option>
+        <option value="fr" data-url="https://trello.com/fr/signup">Français</option>
+        <option value="it" data-url="https://trello.com/it/signup">Italiano</option>
+        <option value="hu" data-url="https://trello.com/hu/signup">Magyar</option>
+        <option value="nl" data-url="https://trello.com/nl/signup">Nederlands</option>
+        <option value="nb" data-url="https://trello.com/nb/signup">Norsk (bokmål)</option>
+        <option value="pl" data-url="https://trello.com/pl/signup">Polski</option>
+        <option value="pt-BR" data-url="https://trello.com/pt-BR/signup">Português (Brasil)</option>
+        <option value="fi" data-url="https://trello.com/fi/signup">Suomi</option>
+        <option value="sv" data-url="https://trello.com/sv/signup">Svenska</option>
+        <option value="vi" data-url="https://trello.com/vi/signup">Tiếng Việt</option>
+        <option value="tr" data-url="https://trello.com/tr/signup">Türkçe</option>
+        <option value="ru" data-url="https://trello.com/ru/signup">Русский</option>
+        <option value="uk" data-url="https://trello.com/uk/signup">Українська</option>
+        <option value="th" data-url="https://trello.com/th/signup">ภาษาไทย</option>
+        <option value="zh-Hans" data-url="https://trello.com/zh-Hans/signup">中文 (简体)</option>
+        <option value="zh-Hant" data-url="https://trello.com/zh-Hant/signup">中文 (繁體)</option>
+        <option value="ja" data-url="https://trello.com/ja/signup">日本語</option>
+      </select>
+    </div>
+    <div>
+      <hr /> <img class="atlassian-logo-small blue" src="https://d2k1ftgv7pobq7.cloudfront.net/meta/c/p/res/images/16006ae28f149063408d601e8c80eddc/atlassian-logo-blue-small.svg" width="150" />
+    </div>
+    <ul class="global-footer-list">
+      <li class="global-footer-list-item"> <a class="global-footer-list-item-link quiet" href="templates.html" data-analytics-link="templatesFooterLink">Templates</a> </li>
+      <li class="global-footer-list-item"> <a class="global-footer-list-item-link quiet" href="pricing.html" data-analytics-link="pricingFooterLink">Pricing</a> </li>
+      <li class="global-footer-list-item"> <a class="global-footer-list-item-link quiet" href="platforms.html" data-analytics-link="platformsFooterLink">Apps</a> </li>
+      <li class="global-footer-list-item"> <a class="global-footer-list-item-link quiet" href="../www.atlassian.com/company/careers/trello.html" data-analytics-link="jobsFooterLink">Jobs</a> </li>
+      <li class="global-footer-list-item"> <a class="global-footer-list-item-link quiet" target="_blank" data-analytics-link="blogFooterLink" href="../blog.trello.com/index.html">Blog</a> </li>
+      <li class="global-footer-list-item"> <a class="global-footer-list-item-link quiet" href="../developers.trello.com/index.html" data-analytics-link="developersFooterLink">Developers</a> </li>
+      <li class="global-footer-list-item"> <a class="global-footer-list-item-link quiet" href="about.html" data-analytics-link="aboutFooterLink">About</a> </li>
+      <li class="global-footer-list-item"> <a class="global-footer-list-item-link quiet" href="../help.trello.com/index.html" data-analytics-link="helpFooterLink">Help</a> </li>
+      <li class="global-footer-list-item"> <a class="global-footer-list-item-link quiet" href="#" data-analytics-link="cookieFooterLink" onclick="trelloCookieConsentDialog()">Cookie Settings</a> </li>
+    </ul>
+  </footer>
+</body>
+</html>
